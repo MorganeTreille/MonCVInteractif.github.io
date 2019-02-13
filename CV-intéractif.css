@@ -1,0 +1,178 @@
+body {
+	background-color: #696969;
+	font-family: "Cursive";
+}
+
+
+h1 {
+	background-color: #300020;
+	color : #008000;
+	font-family: "fantasy";
+	font-size: 40pt;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+li {
+	margin: 10px;
+}
+
+.container {
+	max-width: 160vh;
+	margin: auto;
+	background-color: #300020;
+}
+
+.header {
+	background-color: #D8BFD8 ;
+	padding: 10px;
+}
+
+.contact {
+	justify-content: space-around;
+	display: flex;
+}
+
+.image {
+	margin-top: 30px;
+	height: 270px;
+	border-radius: 15px;
+}
+
+.infos {
+	list-style-type: none;
+	font-size: 20pt;
+	color: #8B008B;
+}
+
+.email, .mobilité, .permis, .mobile {
+	height: 15px;
+	margin-right: 15px;
+}
+
+.lien {
+	font-size: 18pt;
+}
+
+.menu {
+	margin-top: 20px;
+	list-style-type: none;
+}
+
+.buttonMenu {
+	font-size: 20pt;
+	background-color: #F0E68C;
+	color: #2F4F4F;
+	height: 40px;
+	width: 200px;
+	text-align: center;
+	border-radius: 12px 0 12px 0;
+	outline: none;
+}
+
+button:active {
+	background-color: #D19275;
+	outline: none;	
+}
+
+.cv {
+	background-color: #D8BFD8;	
+	padding: 10px;
+}
+
+.onglets {
+	background-color: #300020;
+	color : #008000;
+}
+
+h2 {	
+	font-family: "fantasy";
+	justify-content: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	font-size: 30pt;
+}
+
+.choice {
+	text-align: center;
+	font-size: 18pt;
+}
+
+.checkbox {
+	background-color: #300020;
+	justify-content: : left;
+	color : #A00030;
+	font-size: 16pt;
+	margin-right: 10px;
+	margin-left: 20px;
+}
+
+.accueil {
+	font-size: 14pt;
+	text-align: justify;
+	margin-left: 10%;
+	margin-right: 10%;	
+	color: #483D8B;
+}
+
+h3 {
+	text-align: center;
+}
+
+.listchoix {
+	list-style-type: none;	
+	color: #483D8B;
+}
+
+.détails {
+	display: flex;
+	justify-content: space-between;
+	font-size: 14pt;
+	color: #483D8B;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.détailsUnique {
+	display: flex;
+	justify-content: space-between;
+	font-size: 14pt;
+	color: #483D8B;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.etoile {
+	height: 15px;
+}
+
+.etoile1 {
+	height: 15px;
+	margin-left: 15px;
+}
+
+.description {
+	max-width: 50%;
+	text-align: justify;
+}
+
+img.imgloisir {
+	height: 80px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.broderie, .peinture, .puzzle {
+	display: flex;
+	padding-bottom: 10px;
+}
+
+.separation {
+	background-color: #D8BFD8;
+	height: 150px;
+}
+
+

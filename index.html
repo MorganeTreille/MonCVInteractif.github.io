@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mon CV intéractif</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="CV-intéractif.css">
+
+		<script type="text/javascript">
+			
+		function toggleDisplay(elmt) {
+			var onglet;
+			onglet = document.getElementById(elmt);
+			if(onglet.style.display == "none") {
+				onglet.style.display = "";
+				if(onglet != formations){
+					formations.style.display = "none";
+				}
+				if(onglet != experiences){
+					experiences.style.display = "none";
+				}
+				if(onglet != competences){
+					competences
+					.style.display = "none";
+				}
+				if(onglet != atouts){
+					atouts.style.display = "none";
+				}
+				if(onglet != loisirs){
+					loisirs.style.display = "none";
+				}
+				if(onglet != presentation){
+					presentation.style.display = "none";
+				}
+			}else {
+				onglet.style.display = "none";
+				presentation.style.display = "";
+			}
+		}
+
+		function loisirDisplay(elmt) {
+			var loisir;
+			loisir = document.getElementById(elmt);
+			if(loisir.style.display == "none") {
+				loisir.style.display = "";
+				introloisir.style.display = "none";
+				if (loisir != lecture) {
+					lecture.style.display = "none";
+				}
+				if (loisir != arts) {
+					arts.style.display = "none";
+				}
+				if (loisir != musique) {
+					musique.style.display = "none";
+				}
+			} else {
+				loisir.style.display = "none";
+				introloisir.style.display = "";
+			}
+		}
+
+		function expDisplay(elmt) {
+			var exp;
+			exp = document.getElementById(elmt);
+			if (exp.style.display == "none") {
+				exp.style.display = "";
+				introExp.style.display = "none";
+				if (exp != dev) {
+					dev.style.display = "none";
+				}
+				if (exp != expereo) {
+					expereo.style.display = "none";
+				}
+				if (exp != pff) {
+					pff.style.display = "none";
+				}
+				if (exp!= cmb) {
+					cmb.style.display = "none";
+				}
+				if (exp != procap) {
+					procap.style.display = "none";
+				}
+				if (exp != garo) {
+					garo.style.display = "none";
+				}
+				if (exp != chabot) {
+					chabot.style.display = "none";
+				}
+			} else {
+				experience.style.display = "none";
+				introExp.style.display = "";
+			}
+		}
+
+		function formDisplay(elmt) {
+			var form;
+			form = document.getElementById(elmt);
+			if (form.style.display == "none") {
+				form.style.display = "";
+				introForm.style.display = "none";
+				if (form != java) {
+					java.style.display = "none";
+				}
+				if (form != ocr) {
+					ocr.style.display = "none";
+				}
+				if (form != compta) {
+					compta.style.display = "none";
+				}
+				if (form != licence) {
+					licence.style.display = "none";
+				}
+				if (form != cap) {
+					cap.style.display = "none";
+				}
+				if (form != bac) {
+					bac.style.display = "none";
+				}
+			}else {
+				form.style.display = "none";
+				introForm.style.display = "";
+			}
+		}
+
+		function formChecked () {
+			if (formInfo.checked) {
+				javaMenu.style.display = "";
+				ocrMenu.style.display = "";
+				licenceInfo.style.display = "";
+			} else {
+				javaMenu.style.display = "none";
+				ocrMenu.style.display = "none";
+				licenceInfo.style.display = "none";
+			}
+			if (formAutres.checked) {
+				comptaMenu.style.display = "";
+				capMenu.style.display = "";
+				bacMenu.style.display = "";
+				licenceAutres.style.display = "";
+			} else {
+				comptaMenu.style.display = "none";
+				capMenu.style.display = "none";
+				bacMenu.style.display = "none";
+				licenceAutres.style.display = "none";
+			}
+		}
+
+		function expChecked() {
+			if (expInfo.checked) {
+				devMenu.style.display = "";
+				expereoMenu.style.display = "";
+				pffMenu.style.display = "";
+			} else {
+				devMenu.style.display = "none";
+				expereoMenu.style.display = "none";
+				pffMenu.style.display = "none";
+			}
+			if (expAutres.checked) {
+				procapMenu.style.display = "";
+				cmbMenu.style.display = "";
+				garoMenu.style.display = "";
+				chabotMenu.style.display = "";
+			} else {
+				procapMenu.style.display = "none";
+				cmbMenu.style.display = "none";
+				garoMenu.style.display = "none";
+				chabotMenu.style.display = "none";
+			}
+		}
+
+		function peintureDisplay() {
+			if (peinture.style.display == "none") {
+				peinture.style.display = "";
+			} else {
+				peinture.style.display = "none";
+			}
+		}
+
+		function broderieDisplay() {
+			if (broderies.style.display == "none") {
+				broderies.style.display = "";
+			} else {
+				broderies.style.display = "none";
+			}
+		}
+
+		function puzzleDisplay() {
+			if (puzzle.style.display == "none") {
+				puzzle.style.display = "";
+			} else {
+				puzzle.style.display = "none";
+			}
+		}
+
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="title">
+					<h1>Morgane Treille - Développeuse Junior</h1>
+				</div>
+				<div class="contact">
+					<img class="image" src="photo.jpg">				
+					<ul class="infos">
+						<li><img class="email" src="email.png"> <a href="mailto:?to=treillemorgane@gmail.com" target="_blank" style="text-decoration: none;color: #8B008B"> treillemorgane@gmail.com</a></li>
+						<li><img class="mobilité" src="mobilité.png"> Chauray (79)</li>
+						<li><img class="mobile" src="mobile.jpg"> Mobilité : Nouvelle Aquitaine</li>
+						<li><img class="permis" src="permis.png"> Permis B </li><br>
+						<li>Mon compte GitHub : <a class="lien" href="https://github.com/MorganeTreille" target="_blank" style="text-decoration: none;color: #8B008B">ici</a></li>
+						<li>Mon CV : <a class="lien" href="CV.pdf" download="CV-Morgane-Treille" target="_blank" style="text-decoration: none;color: #8B008B">ici</a> </li>
+					</ul>
+					<ul class="menu">
+						<li><button class="buttonMenu" onclick="toggleDisplay('presentation');">Présentation</button></li>
+						<li><button class="buttonMenu" onclick="toggleDisplay('formations');">Formations</button></li>
+						<li><button class="buttonMenu" onclick="toggleDisplay('experiences');">Expériences</button></li>
+						<li><button class="buttonMenu" onclick="toggleDisplay('competences');">Compétences</button></li>
+						<li><button class="buttonMenu" onclick="toggleDisplay('atouts');">Atouts</button></li>
+						<li><button class="buttonMenu" onclick="toggleDisplay('loisirs');">Centre d'intérêt</button></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="cv">
+
+				<div id="presentation">
+					<div class="onglets">
+						<h2>Présentation</h2>
+					</div>
+					<div class="accueil">
+						<p>Bonjour et bienvenu sur mon CV intéractif. Je me présente Morgane Treille, 29 ans, à la recherche d'un emploi de développeuse fullstack, front-end ou back-end.<br><br>Après avoir suivie différentes voies, j'ai décidé de me reconvertir dans un domaine qui m'a toujours intéressé : l'informatique. Et plus précisément, la programmation.<br><br>Pour cela, j'ai suivi une formation Java EE, avec l'ESN DTA-Ingénierie, qui m'a permis de découvrir différents langages, entre autres : Java, html, css et angular.<br>Suite à cette formation, j'ai intégré l'ESN en tant qu'ingénieur d'études et développement fullstack. J'ai effectué une courte prestation, qui m'a permis de découvrir le langage VBA.<br><br>Aujourd'hui, je souhaite intégrer une entreprise dynamique afin de mettre à profit mes connaissances, les consolider et pouvoir monter en compétences.<br><br>Je vous remercie de l'attention que vous porterez à mon CV. Je reste à disposition pour toutes questions.<br><br>Morgane</p>
+				</div>
+				</div>
+				
+				<div class="formations" style="display: none;" id="formations">
+					<div class="onglets">
+						<h2>Formations</h2>
+					</div>
+					<span class="choice"><p>Choisissez le type de formations que vous souhaitez voir : 
+						<input type="checkbox" class="checkbox" id="formInfo" onclick="formChecked()" checked>
+						<label for="informatique">Informatique</label>
+						<input type="checkbox" class="checkbox" id="formAutres" onclick="formChecked()">
+						<label for="autres">Autres</label></p>
+					</span>
+					<div class="détails">
+						<div>
+							<ul class="listchoix">
+								<li id="javaMenu">
+									<a href="javascript: formDisplay('java');" style="text-decoration: none;color: #483D8B"> 2018 - Formation JAVA EE </a>
+								</li>
+								<li id="ocrMenu">
+									<a href="javascript: formDisplay('ocr');" style="text-decoration: none;color: #483D8B"> 2018 / 2019 - Formations OpenClassRoom </a>
+								</li>
+								<li id="comptaMenu" style="display: none;">
+									<a href="javascript: formDisplay('compta');" style="text-decoration: none;color: #483D8B"> 2016 / 2017 - Certificat de comptable </a>
+								</li>
+								<li>
+									<a href="javascript: formDisplay('licence');" style="text-decoration: none;color: #483D8B"> 2013 / 2016 - Licence Biologie Moléculaire</a>
+								</li>
+								<li id="capMenu" style="display: none;">
+									<a href="javascript: formDisplay('cap')" style="text-decoration: none;color: #483D8B"> 2007 / 2008 - CAP Menuiserie</a>
+								</li>
+								<li id="bacMenu" style="display: none;">
+									<a href="javascript: formDisplay('bac');" style="text-decoration: none;color: #483D8B"> 2007 - Baccalauréat S</a>
+								</li>
+							</ul>
+						</div>
+						<div class="description">
+							<div id="introForm"><p>Cliquez sur une formation pour voir des détails</p></div>
+							<div id="java" style="display: none;"><h3>Formation JAVA EE - Diginamic / DTA-Ingéniérie</h3><p>Formation pratique de 57 jours visant à compléter et concrétiser les connaissances nécessaires pour la conception, le développement et la maintenance des applications java en environnement JEE. Le tout associé à l'ensemble des technologies et frameworks utilisés en entreprise, et une introduction à l'agilité.<br>Au-delà des technologies abordées, ce parcours de formation intègre également les valeurs humaines, la communication et le "savoir être" avec le module "Développement personnel".<br><br>Environnement technique :
+								<li>Java/JEE, Spring Framework </li>
+								<li>HTML, CSS, Javascript, Angular 6</li>
+								<li>Git/GitHub, Maven, Jenkins, Sonar</li>
+								<li>Agile - Scrum</li>
+								<li>IDE : STS, IntellIJ</li>
+							Vous trouverez <a href="http://www.dta-ingenierie.fr/formation/" target="_blank">ici</a> de plus ample informations sur cette formation ainsi que le détail des cours !</p>
+							</div>
+							<div id='ocr' style="display: none;"><h3>Formations OpenClassRoom</h3><p><a href="https://openclassrooms.com/fr" target="_blank">OpenClassRoom</a> est un site qui propose un ensemble de cours sur différents langages informatiques.<br><br> Depuis que j'ai décidé de devenir développeuse, j'ai suivi différents cours :
+								<li>Démarrez votre projet avec Java</li>
+								<li>Gérez votre code avec Git et GitHub</li>
+								<li>Développez des applications Web avec Angular</li>								
+							</div>
+
+							<div id="compta" style="display: none;"><h3>Certificat de comptable - EFC (Ecole Française de Comptabilité)</h3><p>Formation à distance de comptabilité :
+								<li>Comptabilité clients et fournisseurs</li>
+								<li>Facturation, bon de commande et de livraison</li>
+								<li>Gestion des stocks et inventaires</li>
+								<li>Logiciels comptable (EBP) et bureautiques (Excel - Word)</li></p>
+							</div>
+
+							<div id="licence" style="display: none;"><h3>Licence Biologie Moléculaire - UFR Sciences et Techniques, Nantes (44)</h3>
+								<a id="licenceAutres" style="display: none;"><h4>Biologie</h4>Etudes de différents domaines de la biologie de l'être vivant à l'ADN : 
+									<li>Biologie Moléculaire</li>
+									<li>Biochimie</li>
+									<li>Biologie cellulaire et Immunologie</li>
+									<li>Microbiologie</li>
+									<li>Biologie et physiologie animale et végétale</li></a>
+								<a id="licenceInfo"><h4>Algorithmie</h4>Création d'un jeu de pendu avec notice d'utilisation dans un groupe de 3 personnes <h4>Création de pages web</h4> 
+									<li>Mise en page et ajout de texte</li> 
+									<li>Utilisation de tableaux, boutons et menus déroulants</li>
+									<li>Insertion d'images et de liens hypertextes</li>
+									<li>Utilisation de javascript : initialiser ou changer un item, prendre en compte le choix de l'utilisateur</li>Techno : HTML, JavaScript<br><br>Première approche du dévelopement Web et du front-end qui m'a donné envie d'en faire mon métier<h4>2014 - Certificat informatique et internet niveau 1</h4></a>
+							</div>
+							<div id="cap" style="display: none;"><h3>CAP Menuiserie - Les Compagnons du Devoir, Rennes (35)</h3><p>CAP en contrat de professionalisation</p>
+							</div>
+							<div id="bac" style="display: none;"><h3>Bac S option Sciences de l'Ingénieur - Lycée Vauban, Brest (29)</h3><p>Obtenu avec mention Assez Bien !</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="experiences" style="display: none;" id="experiences">
+					<div class="onglets">
+						<h2>Expériences</h2>
+					</div>	
+					<span class="choice"><p>Choisissez le type d'expériences que vous souhaitez voir : 
+						<input type="checkbox" class="checkbox" id="expInfo" checked="" onclick="expChecked()">
+						<label for="informatique">Informatique</label>
+						<input type="checkbox" class="checkbox" id="expAutres" onclick="expChecked()">
+						<label for="autres">Autres</label></p>
+					</span>
+					<div class="détails">
+						<div>
+							<ul class="listchoix">
+								<li id="devMenu">
+									<a href="javascript: expDisplay('dev')" style="text-decoration: none;color: #483D8B"> 2019 - Développeur JAVA</a>
+								</li>
+								<li id="expereoMenu">
+									<a href="javascript: expDisplay('expereo')" style="text-decoration: none;color: #483D8B"> 2018 / 2019 - Ingénieur d'études et développement</a>
+								</li>
+								<li id="pffMenu">
+									<a href="javascript: expDisplay('pff')" style="text-decoration: none;color: #483D8B"> 2018 - Développeur Fullstack (projet de fin de formation)</a>
+								</li>
+								<li id="cmbMenu" style="display: none;">
+									<a href="javascript: expDisplay('cmb')" style="text-decoration: none;color: #483D8B"> 2011 - Employée administrative</a>
+								</li>
+								<li id="procapMenu" style="display: none;">
+									<a href="javascript: expDisplay('procap')" style="text-decoration: none;color: #483D8B"> 2010 / 2011 - Assistante back-office</a>
+								</li>
+								<li id="garoMenu" style="display: none;">
+									<a href="javascript: expDisplay('garo')" style="text-decoration: none;color: #483D8B"> 2009 - Menuisière</a>
+								</li>
+								<li id="chabotMenu" style="display: none;">
+									<a href="javascript: expDisplay('chabot')" style="text-decoration: none;color: #483D8B"> 2007 / 2008 - Agent de production en menuiserie</a>
+								</li>
+							</ul>
+						</div>
+						<div class="description">
+							<div id="introExp">
+								<p>Cliquez sur une formation pour avoir des détails !</p>
+							</div>
+							<div id="dev" style="display: none;"><h3>Développeur JAVA - Diginamic, Saint-Herblain (44)</h3>
+								<p><a href="https://www.diginamic.fr/" target="_blank">Diginamic</a> est un organisme de formation en informatique.<br><br>Dans le cadre de la création d'un logiciel de gestion des formations, j'ai travaillé sur l'édition du bilan de fin de formation en format PDF. <br><br>Pour cela, j'ai fait des recherches sur la librairie IText de Java, avant de coder la création de ce PDF.<br><br> Techno utilisé : Java, IText<br><br></p>
+							</div>
+							<div id="expereo" style="display: none;"><h3>Ingénieur d'études et développement - Expéréo Audit, Rezé (44)</h3>
+								<p><a href="https://www.cabinet-expereo.com/" target="_blank">Expéréo Audit</a> est un cabinet comptable.<br><br>Pour un de ses clients, j'ai automatisé la saisie des immobilisations sur Excel via des macros, en programmation VBA.<br><br>Techno utilisé : VBA</p>
+							</div>
+							<div id="pff" style="display: none;"><h3>Développeur Fullstack (projet de fin de formation) - Diginamic / DTA-Ingénierie</h3>
+								<p>Mise en application des nouveaux acquis de la formation Java EE, avec un projet dans un contexte Srcum.<br><br><h4>Objectifs</h4>
+									<li>Réaliser une plateforme permettant de mettre en relation des particuliers et des artistes pour organiser des concerts privés.</li>
+									<li>Fonctionnalités : inscription, connexion, accès à une liste d'artistes et à leurs descriptions</li>
+								<h4>Environnement technique</h4>
+									<li>API REST : Java EE, Spring Framework</li>
+									<li>Interface responsive : HTML, CSS, Angular 6</li>
+									<li>Base de données : MySQL, hibernate</li>
+									<li>Git, Maven</li></p>
+							</div>
+							<div id="cmb" style="display: none;"><h3>Employée administrative - Crédit Mutuel de Bretagne, Brest (29)</h3>
+								<p>Le CMB est une bancassurance. Chaque engagement auprès d'un de ses clients est ensuite triés, scannés et archivés.<br><br> C'est dans cette optique que j'ai accompli ma mission au service archivage :
+								<li>Tri du courrier et des documents adminitratif</li>
+								<li>Numérisation</li> </p>
+							</div>
+							<div id="procap" style="display: none;"><h3>Assistante back-office - Procapital, Paris (75)</h3>
+								<p><a href="http://www.procapital.fr/" target="_blank">Procapital</a> est un prestataire de services de titres à destination des établissement financiers.<br><br>En prestation pour Audacia, acteur référence de l'investissement, je me suis occupée de la gestion de dossiers de ventes :
+								<li>Vérification des dossiers et des pièces justificatives</li>
+								<li>Saisie informatique</li>
+								<li>Numérisation des dossiers</li></p>
+							</div>
+							<div id="garo" style="display: none;"><h3>Menuisière - L'atelier du Garo, Plouguin (29)</h3>
+								<p><a href="http://www.atelier-du-garo.com/" target="_blank">L'atelier du Garo</a> est un artisan concepteur et fabricant de cuisine, salle de bain, dressing et mobilier sur mesure.<br><br>En remplacement, je me suis occupée de la découpe de panneaux de bois à la scie circulaire.<br><br></p>
+							</div>
+							<div id="chabot" style="display: none;"><h3>Agent de production en menuiserie - Ets Chabot, Les Herbiers (85)</h3>
+							<p>Ets Chabot est une entreprise spécialisé dans la fabrication d'ameublement en bois (principalement de mezzanine) pour Espace Loggia.<br><br>Dans le cadre d'un contrat de professionnalisation pendant un CAP de menuiserie, j'ai travaillé sur différentes machines, seule ou à deux.<br><br>Cette première expérience professionnelle m'a appris a être organisé et productive.</p>
+							</div>						
+						</div>
+					</div>
+				</div>
+
+				<div class="competences" style="display: none;" id="competences">
+					<div class="onglets">
+						<h2>Compétences</h2>
+					</div>
+					<div class="détailsUnique">
+						<div>
+							<h4>Langage de programmation</h4>
+							<li>Java 8, JEE 
+								<img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<li>VBA <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<h4>Développement Web</h4>
+							<li>HTML <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png"></li>
+							<li>CSS <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<li>JavaScript <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<h4>Frameworks</h4>
+							<li>Spring <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<li>NodeJS <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<li>Angular 6 <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<li>JPA / JDBC <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+						</div>
+						<div>
+							<h4>Base de données</h4>
+							<li>MySQL <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<h4>Outils</h4>
+							<li>Git / GitHub <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<li>Maven <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<li>Jenkins <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<li>Sonar <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+							<h4>Outils de test</h4>
+							<li>JUnit <img class="etoile1" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/24/000000/filled-star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png">
+								<img class="etoile" src="https://img.icons8.com/windows/26/000000/star.png"></li>
+						</div>
+					</div>
+				</div>
+
+				<div class="atouts" style="display: none;" id="atouts">
+					<div class="onglets">
+						<h2>Atouts</h2>
+					</div>
+					<div class="détailsUnique">
+						<div>
+							<ul>
+								<li>Calme</li>
+								<li>Organisée</li>
+								<li>Rigoureuse</li>
+								<li>Minutieuse</li>
+							</ul>
+						</div>
+						<div>
+							<ul>
+								<li>Un esprit vif qui s'adapte rapidement</li>
+								<li>Travail en équipe et autonomie</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="loisirs" style="display: none;" id="loisirs">
+					<div class="onglets">
+						<h2>Centres d'intérêt</h2>
+					</div>
+					<div class="détails">
+						<div>
+							<ul class="listchoix">
+								<li> <a href="javascript: loisirDisplay('lecture');" style="text-decoration: none;color: #483D8B">Lecture</a></li>
+								<li> <a href="javascript: loisirDisplay('arts');" style="text-decoration: none;color: #483D8B">Arts Créatifs</a></li>
+								<li> <a href="javascript: loisirDisplay('musique');" style="text-decoration: none;color: #483D8B">Musique</a></li>
+							</ul>
+						</div>
+						<div class="precision">
+							<div id="introloisir"><p>Cliquez sur un centre d'intérêt pour avoir des précisions.</p></div>
+							<div id="lecture" style="display: none;"><h3>Lecture</h3>
+								<span><img class="imgloisir" src="lecture.jpg">
+								<p>Je suis une grande lectrice depuis toute jeune. Je lis tous styles de livres.<br>Je préfère cependant les polars et les histoires fantastiques.</p></span>
+							</div>
+							<div id="arts" style="display: none;"><h3>Arts Créatifs</h3>
+								<img class="imgloisir" src="arts.jpg">
+								<p>Les arts créatifs sont un de mes passes-temps favoris.<br> Particulièrement la <a href="javascript: peintureDisplay()">peinture</a> et différents types de <a href="javascript: broderieDisplay()">broderies</a>.<br>Mais aussi les <a href="javascript: puzzleDisplay()">puzzles 3D</a>.</p>
+								<div class="peinture" id="peinture" style="display: none;"><img class="imgloisir" src="automne.jpg"><img class="imgloisir" src="chat.jpg"><img class="imgloisir" src="indienne.jpg"></div>
+								<div class="broderie" id="broderies" style="display: none;"><img class="imgloisir" src="fille.jpg"><img class="imgloisir" src="chiens.jpg"><img class="imgloisir" src="page.jpg"></div>
+								<div class="puzzle" id="puzzle" style="display: none;"><img src="taj-mahal.jpg" class="imgloisir"><img src="tour-eiffel.jpg" class="imgloisir"></div>
+							</div>
+							<div id="musique" style="display: none;"><h3>Musique</h3>
+								<img class="imgloisir" src="music.jpg">
+								<p>J'adore écouter de la musique, quel que soit le genre.<br> J'ai joué de la guitare pendant plusieurs années, ainsi qu'un peu de piano.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="separation">
+			</div>
+		</div>
+		
+	</body>
+</html>
